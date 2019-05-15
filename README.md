@@ -10,5 +10,5 @@
 
 #4、git commit -m "init my project"提交到了本地仓库未与远端关联
 
-
+#5、git remote add origin git@github.com:cyt1129/Vue-Demo.git
 
