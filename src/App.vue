@@ -1,28 +1,28 @@
 <template>
   <div class="app-container">
     <mt-header fixed title="Vue项目"></mt-header>
-    <h1>123</h1>
-    <i class="el-icon-s-home"></i>
-    <h6>首页</h6>
-    
+    <!--中间主页面-->
+    <router-view></router-view>
+
+
     <!--底部导航-->
     <el-footer>
-      <a class="foot-nav">
+      <router-link class="foot-nav" to="/home">
         <i class="el-icon-grape"></i>
         <h6 class="icon-name">首页</h6>
-      </a>
-      <a class="foot-nav">
+      </router-link>
+      <router-link class="foot-nav" to="/member">
         <i class="el-icon-phone-outline"></i>
-        <h6 class="icon-name">消息</h6>
-      </a>
-      <a class="foot-nav">
-        <i class="el-icon-notebook-1"></i>
-        <h6 class="icon-name">消息</h6>
-      </a>
-      <a class="foot-nav">
-        <i class="el-icon-setting"></i>
-        <h6 class="icon-name">消息</h6>
-      </a>
+        <h6 class="icon-name">会员</h6>
+      </router-link>
+      <router-link class="foot-nav" to="/search">
+        <i class="el-icon-shopping-cart-1"></i>
+        <h6 class="icon-name">购物车</h6>
+      </router-link>
+      <router-link class="foot-nav" to="/shopcar">
+        <i class="el-icon-search"></i>
+        <h6 class="icon-name">搜索</h6>
+      </router-link>
     </el-footer>
   </div>
 </template>
@@ -45,7 +45,6 @@ html,body,p,h6,h1,h2{
 .el-footer{
   background-color: #FFFFFF;
   border-top: solid 0.5px #DCDFE6;
-  color: #606266;
   text-align: center;
   line-height: 20px;
   position: fixed;
@@ -60,6 +59,13 @@ html,body,p,h6,h1,h2{
 }
 i{
   font-size: 24px;
+}
+.active-router{
+  color: #409EFF;
+}
+a{
+  text-decoration: none;
+  color:#606266;
 }
 </style>
 

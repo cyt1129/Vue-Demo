@@ -15,7 +15,11 @@ import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(ElementUI);
 Vue.component(Header.name,Header)
 
+//导入路由
+import router from './router.js';
+
 var vm = new Vue({
   el:'#app',
-  render:(c)=>c(app)
+  render:(c)=>c(app),
+  router:router
 })

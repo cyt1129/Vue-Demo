@@ -12,3 +12,6 @@
 
 #5、git remote add origin git@github.com:cyt1129/Vue-Demo.git
 
+##设置路由高亮
+
+##点击tabbar中的路由链接，展示对应的路由组件
