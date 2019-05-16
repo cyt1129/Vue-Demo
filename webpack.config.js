@@ -70,7 +70,7 @@ module.exports = {
       //安装vue的loader
       {
         test:/\.vue$/,
-        use:'vue-loader'
+        use:['vue-loader']
       }
     ]
   },
