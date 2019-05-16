@@ -18,6 +18,14 @@ Vue.component(Header.name,Header)
 //导入路由
 import router from './router.js';
 
+//导入vue-resource
+import VueResource from 'vue-resource';
+Vue.use(VueResource);
+
+//导入axios
+//import axios from 'axios';
+//Vue.use(axios);
+
 var vm = new Vue({
   el:'#app',
   render:(c)=>c(app),

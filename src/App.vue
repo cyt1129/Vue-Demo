@@ -1,6 +1,6 @@
 <template>
   <div class="app-container">
-    <mt-header fixed title="Vue项目"></mt-header>
+    <mt-header fixed title="✧(≖ ◡ ≖✿)嘿嘿"></mt-header>
     <!--中间主页面-->
     <router-view></router-view>
 

@@ -24,7 +24,8 @@ var router = new VueRouter({
     {
       path:'/shopcar',
       component:shopcar
-    }
+    },
+    {path:'/',redirect:'/home'}
   ],
   linkActiveClass:'active-router'//覆盖默认的路由高亮的类
 })
