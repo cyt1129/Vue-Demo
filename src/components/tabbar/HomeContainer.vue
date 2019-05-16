@@ -9,6 +9,32 @@
     </el-carousel>
 
     <!--6宫格区域-->
+    <ul>
+      <li class="icon-item">
+        <i class="el-icon-edit"></i>
+        <div>新闻资讯</div>
+      </li>
+      <li class="icon-item">
+        <i class="el-icon-picture"></i>
+        <div>图片分享</div>
+      </li>
+      <li class="icon-item">
+        <i class="el-icon-camera-solid" style="{color:red;}"></i>
+        <div>商品购买</div>
+      </li>
+      <li class="icon-item">
+        <i class="el-icon-edit"></i>
+        <div>留言反馈</div>
+      </li>
+      <li class="icon-item">
+        <i class="el-icon-edit"></i>
+        <div>视频专区</div>
+      </li>
+      <li class="icon-item">
+        <i class="el-icon-edit"></i>
+        <div>新闻资讯</div>
+      </li>
+    </ul>
 
   </div>
 </template>
@@ -50,5 +76,29 @@ export default {
 img{
   width:100%;
   height: 100%;
+}
+ul{
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  text-align: center;
+}
+.icon-item{
+  display: inline-block;
+  width: 30%;
+  height: 100px;
+  position: relative;
+  text-align: center;
+}
+.icon-item div{
+  position: absolute;
+  bottom: 10px;
+  margin-left: -24px; /*绝对定位居中，因为absolute情况下无法使用margin:0 auto*/
+  left:50%;
+  font-size: 12px;
+}
+i{
+  font-size: 32px;
+  margin-top: 20%;
 }
 </style>

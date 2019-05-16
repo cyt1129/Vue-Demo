@@ -2,8 +2,9 @@
   <div class="app-container">
     <mt-header fixed title="✧(≖ ◡ ≖✿)嘿嘿"></mt-header>
     <!--中间主页面-->
-    <router-view></router-view>
-
+    <transition>
+      <router-view></router-view>
+    </transition>
 
     <!--底部导航-->
     <el-footer>
@@ -37,6 +38,7 @@ export default {
 <style>
 .app-container{
   padding-top:40px; 
+  overflow-x: hidden;/*影藏x轴上的滚动条，因为动画时，待出现的页面会出现在页面右侧看不见的地方，就会产生一个滚动条*/
 }
 html,body,p,h6,h1,h2{
   margin: 0;
@@ -66,6 +68,19 @@ i{
 a{
   text-decoration: none;
   color:#606266;
+}
+
+.v-enter{
+  opacity: 0;
+  transform: translateX(100%);/*进入之前在100%位置*/
+}
+.v-leave-to{
+  opacity: 0;
+  transform: translateX(-100%);/*进入之前在100%位置*/
+  position: fixed;/*或者absolute也行，因为是脱离标准流*/
+}
+.v-enter-active,.v-leave-active{
+  transition: all 0.5s ease;
 }
 </style>
 
