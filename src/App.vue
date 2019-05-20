@@ -58,6 +58,7 @@ html,body,p,h6,h1,h2{
 .foot-nav{
   width:25%;
   padding-top: 10px;
+  color:#606266;
 }
 i{
   font-size: 24px;
@@ -65,11 +66,6 @@ i{
 .active-router{
   color: #409EFF;
 }
-a{
-  text-decoration: none;
-  color:#606266;
-}
-
 .v-enter{
   opacity: 0;
   transform: translateX(100%);/*进入之前在100%位置*/

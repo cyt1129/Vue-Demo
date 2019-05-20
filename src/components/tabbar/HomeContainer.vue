@@ -11,8 +11,10 @@
     <!--6宫格区域-->
     <ul>
       <li class="icon-item">
-        <i class="el-icon-edit"></i>
-        <div>新闻资讯</div>
+        <router-link to="/home/newslist">
+          <i class="el-icon-edit"></i>
+          <div>新闻资讯</div>
+        </router-link>
       </li>
       <li class="icon-item">
         <i class="el-icon-picture"></i>
@@ -32,7 +34,7 @@
       </li>
       <li class="icon-item">
         <i class="el-icon-edit"></i>
-        <div>新闻资讯</div>
+        <div>联系我们</div>
       </li>
     </ul>
 
@@ -41,26 +43,25 @@
 
 <script>
 export default {
-  data(){
-    return{
-      lunbotuList:[]//保存轮播图的数组
-    }
+  data() {
+    return {
+      lunbotuList: [] //保存轮播图的数组
+    };
   },
-  created(){
+  created() {
     this.getLunbotu();
   },
-  methods:{
-    getLunbotu(){
-      this.$http.get("http://120.77.181.41:3000/api/getcover")
-                .then(result=>{
-                  //console.log(result.body);
-                  if(result.body.status == 1){
-                    this.lunbotuList = result.body.imgs;
-                  }else{
-                    console.log("加载失败")//用弹框
-                  }
-                });
-    },
+  methods: {
+    getLunbotu() {
+      this.$http.get("api/getcover").then(result => {
+        //console.log(result.body);
+        if (result.body.status == 1) {
+          this.lunbotuList = result.body.imgs;
+        } else {
+          console.log("加载失败"); //用弹框
+        }
+      });
+    }
   }
 };
 </script>
@@ -73,31 +74,31 @@ export default {
   line-height: 200px;
   margin: 0;
 }
-img{
-  width:100%;
+img {
+  width: 100%;
   height: 100%;
 }
-ul{
+ul {
   list-style: none;
   padding: 0;
   margin-top: 20px;
   text-align: center;
 }
-.icon-item{
+.icon-item {
   display: inline-block;
   width: 30%;
   height: 100px;
   position: relative;
   text-align: center;
 }
-.icon-item div{
+.icon-item div {
   position: absolute;
   bottom: 10px;
   margin-left: -24px; /*绝对定位居中，因为absolute情况下无法使用margin:0 auto*/
-  left:50%;
+  left: 50%;
   font-size: 12px;
 }
-i{
+i {
   font-size: 32px;
   margin-top: 20%;
 }
